@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2018.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.2/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_tl-react-redux-dotnet.2118141337.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p=".gitignore" t="Include" />
+      <e p="appsettings.Development.json" t="Include" />
+      <e p="appsettings.json" t="Include" />
+      <e p="Bin" t="ExcludeRecursive" />
+      <e p="ClientApp" t="Include">
+        <e p=".gitignore" t="Include" />
+        <e p="node_modules" t="ExcludeRecursive">
+          <e p="bootstrap" t="IncludeRecursive" />
+          <e p="react" t="IncludeRecursive" />
+          <e p="react-bootstrap" t="IncludeRecursive" />
+          <e p="react-dom" t="IncludeRecursive" />
+          <e p="react-redux" t="IncludeRecursive" />
+          <e p="react-router-bootstrap" t="IncludeRecursive" />
+          <e p="react-router-dom" t="IncludeRecursive" />
+          <e p="react-router-redux" t="IncludeRecursive" />
+          <e p="react-scripts" t="IncludeRecursive" />
+          <e p="redux" t="IncludeRecursive" />
+          <e p="redux-thunk" t="IncludeRecursive" />
+          <e p="rimraf" t="IncludeRecursive" />
+        </e>
+        <e p="package-lock.json" t="Include" />
+        <e p="package.json" t="Include" />
+        <e p="public" t="Include">
+          <e p="favicon.ico" t="Include" />
+          <e p="index.html" t="Include" />
+          <e p="manifest.json" t="Include" />
+        </e>
+        <e p="README.md" t="Include" />
+        <e p="src" t="Include">
+          <e p="App.js" t="Include" />
+          <e p="App.test.js" t="Include" />
+          <e p="components" t="Include">
+            <e p="companiesList" t="Include">
+              <e p="CompaniesList.css" t="Include" />
+              <e p="CompaniesList.js" t="Include" />
+            </e>
+            <e p="companyForm" t="Include">
+              <e p="CompanyForm.css" t="Include" />
+              <e p="CompanyForm.js" t="Include" />
+            </e>
+            <e p="Counter.js" t="Include" />
+            <e p="events" t="Include">
+              <e p="Events.css" t="Include" />
+              <e p="Events.js" t="Include" />
+            </e>
+            <e p="eventsList" t="Include">
+              <e p="EventsList.css" t="Include" />
+              <e p="EventsList.js" t="Include" />
+            </e>
+            <e p="FetchData.js" t="Include" />
+            <e p="Home.js" t="Include" />
+            <e p="Layout.js" t="Include" />
+            <e p="NavMenu.css" t="Include" />
+            <e p="NavMenu.js" t="Include" />
+          </e>
+          <e p="index.css" t="Include" />
+          <e p="index.js" t="Include" />
+          <e p="registerServiceWorker.js" t="Include" />
+          <e p="store" t="Include">
+            <e p="Company.js" t="Include" />
+            <e p="configureStore.js" t="Include" />
+            <e p="Counter.js" t="Include" />
+            <e p="WeatherForecasts.js" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Controllers" t="Include">
+        <e p="SampleDataController.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp2.1" t="Include">
+            <e p="tl-react-redux-dotnet.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Pages" t="Include">
+        <e p="_ViewImports.cshtml" t="Include" />
+        <e p="Error.cshtml" t="Include" />
+        <e p="Error.cshtml.cs" t="Include" />
+      </e>
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="launchSettings.json" t="Include" />
+      </e>
+      <e p="Startup.cs" t="Include" />
+      <e p="tl-react-redux-dotnet.csproj" t="IncludeRecursive" />
+    </e>
+  </component>
+</project>
