@@ -39,6 +39,11 @@ export default props => (
                   <Glyphicon glyph='th-list' /> Companies
               </NavItem>
           </LinkContainer>
+          <LinkContainer to={'/companiesList'}>
+              <NavItem>
+                  <Glyphicon glyph='th-list' /> Companies List
+              </NavItem>
+          </LinkContainer>
       </Nav>
     </Navbar.Collapse>
   </Navbar>

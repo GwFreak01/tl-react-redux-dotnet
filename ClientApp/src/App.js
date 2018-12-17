@@ -6,6 +6,7 @@ import Counter from './components/Counter';
 import FetchData from './components/FetchData';
 import Events from './components/events/Events';
 import CompanyForm from './components/companyForm/CompanyForm';
+import {CompaniesList} from "./components/companiesList/CompaniesList";
 
 export default () => (
   <Layout>
@@ -14,5 +15,6 @@ export default () => (
     <Route path='/fetchdata/:startDateIndex?' component={FetchData} />
       <Route path='/events' component={Events} />
       <Route path='/companies' component={CompanyForm} />
+      <Route path='/companiesList' component={CompaniesList} />
   </Layout>
 );

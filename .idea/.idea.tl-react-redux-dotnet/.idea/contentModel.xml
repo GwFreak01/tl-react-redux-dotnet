@@ -3,6 +3,7 @@
   <component name="ContentModelStore">
     <e p="$USER_HOME$/Library/Caches/Rider2018.2/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/Rider2018.2/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_tl-react-redux-dotnet.2118141337.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p=".gitignore" t="Include" />
       <e p="appsettings.Development.json" t="Include" />
@@ -71,7 +72,13 @@
         </e>
       </e>
       <e p="Controllers" t="Include">
+        <e p="CompanyController.cs" t="Include" />
         <e p="SampleDataController.cs" t="Include" />
+      </e>
+      <e p="Models" t="Include">
+        <e p="Company.cs" t="Include" />
+        <e p="CompanyDataAccessLayer.cs" t="Include" />
+        <e p="react_tlContext.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
