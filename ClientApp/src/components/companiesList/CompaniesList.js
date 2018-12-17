@@ -2,8 +2,8 @@
 import './CompaniesList.css';
 
 export class CompaniesList extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             companyList: []
         };

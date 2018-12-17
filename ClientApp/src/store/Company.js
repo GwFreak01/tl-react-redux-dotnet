@@ -22,14 +22,15 @@ export const reducer = (state, action) => {
     switch (action.type) {
         case updateCompanyForm:
             console.log('updateCompanyForm_reducer');
-            return {
-                companyName: action.updates.companyName,
-                street1: action.updates.street1,
-                street2: action.updates.street2,
-                city: action.updates.city,
-                state: action.updates.state,
-                zipcode: action.updates.zipcode,
-            };
+            // return {
+            //     companyName: action.updates.companyName,
+            //     street1: action.updates.street1,
+            //     street2: action.updates.street2,
+            //     city: action.updates.city,
+            //     state: action.updates.state,
+            //     zipcode: action.updates.zipcode,
+            // };
+            return state;
         case submitCompanyForm:
             state = {
                 companyName: action.updates.companyName,
@@ -39,9 +40,11 @@ export const reducer = (state, action) => {
                 state: action.updates.state,
                 zipcode: action.updates.zipcode,
             };
+            return state;
             
+        default:
+            return state;
             
     }
     
-    return state;
 };

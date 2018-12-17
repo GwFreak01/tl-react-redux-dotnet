@@ -11,6 +11,30 @@
       <e p="Bin" t="ExcludeRecursive" />
       <e p="ClientApp" t="Include">
         <e p=".gitignore" t="Include" />
+        <e p="build" t="Include">
+          <e p="asset-manifest.json" t="Include" />
+          <e p="favicon.ico" t="Include" />
+          <e p="index.html" t="Include" />
+          <e p="manifest.json" t="Include" />
+          <e p="service-worker.js" t="Include" />
+          <e p="static" t="Include">
+            <e p="css" t="Include">
+              <e p="main.7ce0014f.css" t="Include" />
+              <e p="main.7ce0014f.css.map" t="Include" />
+            </e>
+            <e p="js" t="Include">
+              <e p="main.6156ebcb.js" t="Include" />
+              <e p="main.6156ebcb.js.map" t="Include" />
+            </e>
+            <e p="media" t="Include">
+              <e p="glyphicons-halflings-regular.448c34a5.woff2" t="Include" />
+              <e p="glyphicons-halflings-regular.89889688.svg" t="Include" />
+              <e p="glyphicons-halflings-regular.e18bbf61.ttf" t="Include" />
+              <e p="glyphicons-halflings-regular.f4769f9b.eot" t="Include" />
+              <e p="glyphicons-halflings-regular.fa277232.woff" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="node_modules" t="ExcludeRecursive">
           <e p="bootstrap" t="IncludeRecursive" />
           <e p="react" t="IncludeRecursive" />
