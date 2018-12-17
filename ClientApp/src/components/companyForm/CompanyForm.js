@@ -59,7 +59,7 @@ export class CompanyForm extends Component {
         const target = event.target;
         const value = target.value;
         const name = target.name;
-        this.props.dispatch(updateCompanyForm(updates));
+        // this.props.dispatch(updateCompanyForm(updates));
         
         
     }

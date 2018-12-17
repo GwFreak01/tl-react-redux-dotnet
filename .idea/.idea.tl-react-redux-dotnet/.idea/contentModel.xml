@@ -37,6 +37,7 @@
         </e>
         <e p="node_modules" t="ExcludeRecursive">
           <e p="bootstrap" t="IncludeRecursive" />
+          <e p="prop-types" t="IncludeRecursive" />
           <e p="react" t="IncludeRecursive" />
           <e p="react-bootstrap" t="IncludeRecursive" />
           <e p="react-dom" t="IncludeRecursive" />
@@ -58,6 +59,10 @@
         </e>
         <e p="README.md" t="Include" />
         <e p="src" t="Include">
+          <e p="actions" t="Include">
+            <e p="companyAction.js" t="Include" />
+            <e p="types.js" t="Include" />
+          </e>
           <e p="App.js" t="Include" />
           <e p="App.test.js" t="Include" />
           <e p="components" t="Include">
@@ -86,6 +91,10 @@
           </e>
           <e p="index.css" t="Include" />
           <e p="index.js" t="Include" />
+          <e p="reducers" t="Include">
+            <e p="companyReducer.js" t="Include" />
+            <e p="index.js" t="Include" />
+          </e>
           <e p="registerServiceWorker.js" t="Include" />
           <e p="store" t="Include">
             <e p="Company.js" t="Include" />
@@ -93,6 +102,7 @@
             <e p="Counter.js" t="Include" />
             <e p="WeatherForecasts.js" t="Include" />
           </e>
+          <e p="store.js" t="Include" />
         </e>
       </e>
       <e p="Controllers" t="Include">

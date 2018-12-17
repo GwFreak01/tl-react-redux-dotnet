@@ -6,7 +6,7 @@ import Counter from './components/Counter';
 import FetchData from './components/FetchData';
 import Events from './components/events/Events';
 import CompanyForm from './components/companyForm/CompanyForm';
-import {CompaniesList} from "./components/companiesList/CompaniesList";
+import CompaniesList from "./components/companiesList/CompaniesList";
 
 export default () => (
   <Layout>

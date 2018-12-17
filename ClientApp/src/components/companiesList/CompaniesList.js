@@ -1,26 +1,21 @@
 ﻿import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './CompaniesList.css';
+import { connect } from 'react-redux';
+import { fetchCompanies } from "../../actions/companyAction";
 
-export class CompaniesList extends Component {
+class CompaniesList extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            companyList: []
-        };
-
-        fetch('api/Company/Index')
-            .then(response => response.json())
-            .then(data => {
-                console.log('GET ALL COMPANIES: ', data);
-                this.setState({
-                    companyList: data
-                });
-            });
         
         this.renderCompanyTable = this.renderCompanyTable.bind(this);
     }
+    
+    componentWillMount() {
+        this.props.fetchCompanies();
+    }
     render() {
-        let contents = this.renderCompanyTable(this.state.companyList);
+        let contents = this.renderCompanyTable(this.props.companies);
         return (
             <div>
                 {contents}
@@ -62,3 +57,13 @@ export class CompaniesList extends Component {
     }
 }
 
+CompaniesList.propTypes = {
+    fetchCompanies: PropTypes.func.isRequired,
+    companies: PropTypes.array.isRequired
+};
+
+const mapStateToProps = state => ({
+    companies: state.companies.companyItems
+})
+
+export default connect(mapStateToProps, { fetchCompanies })(CompaniesList);
