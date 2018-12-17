@@ -1,3 +1,4 @@
+using System;  
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
@@ -15,11 +16,17 @@ namespace tl_react_redux_dotnet.Controllers
         [Route("api/Company/Index")]
         public IEnumerable<Company> Index()
         {
-            return objcompany.getAllCompanies();
+            return objcompany.GetAllCompanies();
         }
-        
-        
-        
+
+
+        [HttpPost]
+        [Route("api/Company/Create")]
+        public int Create([FromBody] Company company)
+        {
+            Console.WriteLine("CompanyController_Create: " + company);
+            return objcompany.AddCompany(company);
+        }
        
 
     

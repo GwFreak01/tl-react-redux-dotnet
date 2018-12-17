@@ -13,6 +13,12 @@ export default function (state = initialState, action) {
                 ...state,
                 companyItems: action.payload
             };
+        case NEW_COMPANY:
+            console.log('NEW_COMPANY_REDUCER');
+            return {
+                ...state,
+                companyItem: action.payload
+            };
         default:
             return state;
     }

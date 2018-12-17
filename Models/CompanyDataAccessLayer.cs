@@ -11,7 +11,8 @@ namespace tl
     {
         react_tlContext db = new react_tlContext();
 
-        public IEnumerable<Company> getAllCompanies()
+        //Get All Company Records
+        public IEnumerable<Company> GetAllCompanies()
         {
             try
             {
@@ -23,6 +24,25 @@ namespace tl
                 throw;
             }
         }
+        
+        //Create new company record
+
+        public int AddCompany(Company company)
+        {
+            try
+            {
+                Console.WriteLine("CompanyDAL_ADD_COMPANY: " + company.Zipcode);
+                db.Company.Add(company);
+                db.SaveChanges();
+                return 1;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+        
         
     }
 }
