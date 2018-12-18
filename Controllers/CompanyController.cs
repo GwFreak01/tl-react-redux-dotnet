@@ -1,7 +1,6 @@
 using System;  
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using tl;
@@ -35,6 +34,21 @@ namespace tl_react_redux_dotnet.Controllers
         {
             return _objcompany.GetCompanyData(id);
         }
+
+        [HttpPut]
+        [Route("api/Company/{id}")]
+        public Company GetCompany([FromBody] Company company)
+        {
+            return _objcompany.UpdateCompanyData(company);
+        }
+        
+        [HttpDelete]
+        [Route("api/Company/{id}")]
+        public int DeleteCompany(int id)
+        {
+            return _objcompany.DeleteCompanyData(id);
+        }
+        
         
         
         

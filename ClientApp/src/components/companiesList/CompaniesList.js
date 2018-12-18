@@ -23,6 +23,7 @@ export class CompaniesList extends Component {
     render() {
         const contents = this.props.companies.map(company => (
             <tr key={company.companyId}>
+                <td>{company.companyId}</td>
                 <td>{company.companyName}</td>
                 <td>{company.street1}</td>
                 <td>{company.street2}</td>

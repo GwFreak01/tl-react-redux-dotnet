@@ -1,5 +1,4 @@
 ﻿import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import './Companies.css';
 import { connect } from 'react-redux';
 import CompanyForm from "../companyForm/CompanyForm";
@@ -31,16 +30,5 @@ export class Companies extends Component {
         );
     }
 }
-
-// Companies.propTypes = {
-//     fetchCompanies: PropTypes.func.isRequired,
-//     companies: PropTypes.array.isRequired,
-//     newCompany: PropTypes.object
-// };
-
-const mapStateToProps = state => ({
-    companies: state.companies.companyItems,
-    newCompany: state.companies.companyItem
-});
 
 export default connect()(Companies);
