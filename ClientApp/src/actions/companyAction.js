@@ -1,7 +1,7 @@
 import { FETCH_COMPANIES, NEW_COMPANY } from "./types";
 
 export const fetchCompanies = () => dispatch => {
-    fetch('api/Company/Index')
+    fetch('api/company')
         .then(response => response.json())
         .then(companies => {
             console.log('FETCH_COMPANIES_ACTION: ', companies);
@@ -14,7 +14,7 @@ export const fetchCompanies = () => dispatch => {
 
 export const createCompany = (companyData) => dispatch => {
     console.log('CREATE_COMPANY: ', companyData);
-    fetch('api/Company/Create', {
+    fetch('api/company/create', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

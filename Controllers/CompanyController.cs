@@ -14,7 +14,7 @@ namespace tl_react_redux_dotnet.Controllers
         private readonly CompanyDataAccessLayer _objcompany = new CompanyDataAccessLayer();
 
         [HttpPost]
-        [Route("api/Company/Create")]
+        [Route("api/company/create")]
         public Company Create([FromBody] Company company)
         {
             Console.WriteLine("CompanyController_Create: " + company);
@@ -22,28 +22,28 @@ namespace tl_react_redux_dotnet.Controllers
         }
         
         [HttpGet]
-        [Route("api/Company/Index")]
+        [Route("api/company/")]
         public  IEnumerable<Company> Index()
         {
             return  _objcompany.GetAllCompanies();
         }
         
         [HttpGet]
-        [Route("api/Company/{id}")]
+        [Route("api/company/{id}")]
         public Company GetCompany(int id)
         {
             return _objcompany.GetCompanyData(id);
         }
 
         [HttpPut]
-        [Route("api/Company/{id}")]
+        [Route("api/company/{id}")]
         public Company GetCompany([FromBody] Company company)
         {
             return _objcompany.UpdateCompanyData(company);
         }
         
         [HttpDelete]
-        [Route("api/Company/{id}")]
+        [Route("api/company/{id}")]
         public int DeleteCompany(int id)
         {
             return _objcompany.DeleteCompanyData(id);

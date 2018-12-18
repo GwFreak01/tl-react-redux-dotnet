@@ -13,10 +13,6 @@ export class Companies extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        // if (nextProps.newCompany) {
-        //     console.log('AUTOUPDATE_COMPANYLIST', nextProps.newCompany);
-        //     this.props.companies.unshift(nextProps.newCompany);
-        // }
     }
     render() {
         return (
