@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import './CompanyForm.css';
 import connect from "react-redux/es/connect/connect";
-import { createCompany } from "../../actions/companyAction";
+import { createCompany } from "../../actions/companyActions";
 
 export class CompanyForm extends Component {
 

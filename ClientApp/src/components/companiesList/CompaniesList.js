@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import './CompaniesList.css';
 import { connect } from 'react-redux';
-import { fetchCompanies } from "../../actions/companyAction";
+import { fetchCompanies } from "../../actions/companyActions";
 
 export class CompaniesList extends Component {
     constructor(props) {

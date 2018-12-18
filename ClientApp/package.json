@@ -20,7 +20,21 @@
   "scripts": {
     "start": "rimraf ./build && react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch --coverage",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "^23.6.0",
+    "redux-mock-store": "^1.5.3"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./__tests__/setup/setupEnzyme.js",
+    "testPathIgnorePatterns": [
+      "./__tests__/setup/"
+    ]
   }
 }
