@@ -9,14 +9,14 @@ namespace tl
 {
     public class CompanyDataAccessLayer
     {
-        react_tlContext db = new react_tlContext();
+        private readonly react_tlContext _db = new react_tlContext();
 
         //Get All Company Records
         public IEnumerable<Company> GetAllCompanies()
         {
             try
             {
-                return db.Company.ToList();
+                return _db.Company.ToList();
             }
             catch (Exception e)
             {
@@ -25,6 +25,23 @@ namespace tl
             }
         }
         
+        //Get Company Record
+        public Company GetCompanyData(int id)
+        {
+            try
+            {
+                Company company = _db.Company.Find(id);
+                Console.WriteLine("DAL_GETCOMPANY: {0}", company);
+                return company;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+        
+        
         //Create new company record
 
         public int AddCompany(Company company)
@@ -32,8 +49,8 @@ namespace tl
             try
             {
                 Console.WriteLine("CompanyDAL_ADD_COMPANY: " + company.Zipcode);
-                db.Company.Add(company);
-                db.SaveChanges();
+                _db.Company.Add(company);
+                _db.SaveChanges();
                 return 1;
             }
             catch (Exception e)

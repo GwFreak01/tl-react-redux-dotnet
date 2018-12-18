@@ -4,30 +4,37 @@ import './CompaniesList.css';
 import { connect } from 'react-redux';
 import { fetchCompanies } from "../../actions/companyAction";
 
-class CompaniesList extends Component {
+export class CompaniesList extends Component {
     constructor(props) {
         super(props);
         
-        this.renderCompanyTable = this.renderCompanyTable.bind(this);
     }
     
     componentWillMount() {
         this.props.fetchCompanies();
     }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.newCompany) {
+            console.log('AUTOUPDATE_COMPANYLIST', nextProps.newCompany);
+            this.props.companies.unshift(nextProps.newCompany);
+        }
+    }
     render() {
-        let contents = this.renderCompanyTable(this.props.companies);
+        const contents = this.props.companies.map(company => (
+            <tr key={company.companyId}>
+                <td>{company.companyName}</td>
+                <td>{company.street1}</td>
+                <td>{company.street2}</td>
+                <td>{company.city}</td>
+                <td>{company.state}</td>
+                <td>{company.zipcode}</td>
+            </tr>
+        ));
         return (
             <div>
-                {contents}
-            </div>
-            
-        );
-    }
-
-    renderCompanyTable(companyList) {
-        return (
-            <table className='companyTable'>
-                <thead>
+                <table className='companyTable'>
+                    <thead>
                     <tr>
                         <th>CompanyId</th>
                         <th>Name</th>
@@ -37,33 +44,28 @@ class CompaniesList extends Component {
                         <th>State</th>
                         <th>Zipcode</th>
                     </tr>
-                </thead>
-                <tbody>
-                {companyList.map(company => {
-                    return (
-                        <tr key={company.companyId}>
-                            <td>{company.companyName}</td>
-                            <td>{company.street1}</td>
-                            <td>{company.street2}</td>
-                            <td>{company.city}</td>
-                            <td>{company.state}</td>
-                            <td>{company.zipcode}</td>
-                        </tr>
-                    );
-                })}
-                </tbody>
-            </table>
-        )
+                    </thead>
+                    <tbody>
+                    {contents}
+                    </tbody>
+                </table>
+                
+            </div>
+            
+        );
     }
+    
 }
 
 CompaniesList.propTypes = {
     fetchCompanies: PropTypes.func.isRequired,
-    companies: PropTypes.array.isRequired
+    companies: PropTypes.array.isRequired,
+    newCompany: PropTypes.object
 };
 
 const mapStateToProps = state => ({
-    companies: state.companies.companyItems
-})
+    companies: state.companies.companyItems,
+    newCompany: state.companies.companyItem
+});
 
 export default connect(mapStateToProps, { fetchCompanies })(CompaniesList);

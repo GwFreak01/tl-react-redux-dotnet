@@ -42,6 +42,10 @@
           <e p="App.js" t="Include" />
           <e p="App.test.js" t="Include" />
           <e p="components" t="Include">
+            <e p="companies" t="Include">
+              <e p="Companies.css" t="Include" />
+              <e p="Companies.js" t="Include" />
+            </e>
             <e p="companiesList" t="Include">
               <e p="CompaniesList.css" t="Include" />
               <e p="CompaniesList.js" t="Include" />

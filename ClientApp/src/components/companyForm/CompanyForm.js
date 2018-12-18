@@ -8,6 +8,7 @@ export class CompanyForm extends Component {
 
     constructor(props) {
         super(props);
+        
         this.state = {
             companyName: '',
             street1: '',
@@ -91,7 +92,6 @@ export class CompanyForm extends Component {
         const target = event.target;
         const value = target.value;
         const name = target.name;
-        // this.props.dispatch(updateCompanyForm(updates));
         this.setState({
             [name]: value
         });
@@ -107,6 +107,8 @@ export class CompanyForm extends Component {
             state: this.state.state,
             zipcode: this.state.zipcode
         };
+        console.log(company);
+        console.log(this.props);
         this.props.createCompany(company)
 
     }
@@ -114,6 +116,6 @@ export class CompanyForm extends Component {
 
 CompanyForm.propTypes = {
     createCompany: PropTypes.func.isRequired
-}
+};
 
 export default connect(null, { createCompany })(CompanyForm);
