@@ -22,8 +22,9 @@ export const createCompany = (companyData) => dispatch => {
         body: JSON.stringify(companyData)
     })
         .then(response => {
-            response.json();
-        })
+                return response.json()
+            }
+        )
         .then(company => {
             console.log('NEW_COMPANIES_ACTION: ', company);
             dispatch({

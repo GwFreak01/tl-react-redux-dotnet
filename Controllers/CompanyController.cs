@@ -14,6 +14,14 @@ namespace tl_react_redux_dotnet.Controllers
     {
         private readonly CompanyDataAccessLayer _objcompany = new CompanyDataAccessLayer();
 
+        [HttpPost]
+        [Route("api/Company/Create")]
+        public Company Create([FromBody] Company company)
+        {
+            Console.WriteLine("CompanyController_Create: " + company);
+            return _objcompany.AddCompany(company);
+        }
+        
         [HttpGet]
         [Route("api/Company/Index")]
         public  IEnumerable<Company> Index()
@@ -27,14 +35,12 @@ namespace tl_react_redux_dotnet.Controllers
         {
             return _objcompany.GetCompanyData(id);
         }
+        
+        
+        
+        
 
 
-        [HttpPost]
-        [Route("api/Company/Create")]
-        public int Create([FromBody] Company company)
-        {
-            Console.WriteLine("CompanyController_Create: " + company);
-            return _objcompany.AddCompany(company);
-        }
+        
     }
 }

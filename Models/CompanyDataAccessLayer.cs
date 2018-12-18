@@ -11,6 +11,24 @@ namespace tl
     {
         private readonly react_tlContext _db = new react_tlContext();
 
+        //Create new company record
+
+        public Company AddCompany(Company company)
+        {
+            try
+            {
+                Console.WriteLine("CompanyDAL_ADD_COMPANY: " + company.Zipcode);
+                _db.Company.Add(company);
+                _db.SaveChanges();
+                return company;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+        
         //Get All Company Records
         public IEnumerable<Company> GetAllCompanies()
         {
@@ -31,7 +49,6 @@ namespace tl
             try
             {
                 Company company = _db.Company.Find(id);
-                Console.WriteLine("DAL_GETCOMPANY: {0}", company);
                 return company;
             }
             catch (Exception e)
@@ -42,23 +59,7 @@ namespace tl
         }
         
         
-        //Create new company record
-
-        public int AddCompany(Company company)
-        {
-            try
-            {
-                Console.WriteLine("CompanyDAL_ADD_COMPANY: " + company.Zipcode);
-                _db.Company.Add(company);
-                _db.SaveChanges();
-                return 1;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
-        }
+        
         
         
     }
